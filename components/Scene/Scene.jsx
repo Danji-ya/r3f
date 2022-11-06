@@ -1,17 +1,19 @@
 import { Canvas } from '@react-three/fiber';
-import React, { useState } from 'react';
 import Box from '../Box';
 import Camera from '../Camera';
+import Text from '../Text';
 
-function Scene() {
-  const [isZoom, setZoom] = useState(false);
-  const toggleZoom = () => setZoom((active) => !active);
-
+function Scene({ words }) {
   return (
     <Canvas>
       <gridHelper args={[10, 10, `red`, `gray`]} />
-      <Box onChangeZoom={toggleZoom} />
-      <Camera selected={isZoom} />
+      <ambientLight />
+      <Box />
+      <Camera>
+        {words.map((word, idx) => (
+          <Text key={`${word.color + idx}`} data={word} />
+        ))}
+      </Camera>
     </Canvas>
   );
 }
