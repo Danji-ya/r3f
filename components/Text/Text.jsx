@@ -1,10 +1,6 @@
 import { useLayoutEffect, useRef, useState } from 'react';
 import { Text as RText } from '@react-three/drei';
 
-const TEXT = {
-  ARGS: [0.5, 0.5, 0.5],
-};
-
 function Text({ data, zoomToText }) {
   const meshRef = useRef();
   const [clicked, setClicked] = useState(false);

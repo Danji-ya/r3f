@@ -3,7 +3,7 @@ const nextConfig = {
   reactStrictMode: false,
   webpack(config) {
     config.module.rules.push({
-      test: /\.(obj|glb)$/i,
+      test: /\.(obj|glb|gltf)$/i,
       type: 'asset/resource',
       generator: {
         filename: 'static/[hash][name][ext]',

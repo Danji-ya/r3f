@@ -8,7 +8,7 @@ export default function Home() {
     words.push({
       text: 'a',
       color: randomColor(),
-      position: [randomPos(), randomPos(), randomPos({min: 0, max: 3})],
+      position: [randomPos(), randomPos(), randomPos({ min: 0, max: 3 })],
     });
   }
 

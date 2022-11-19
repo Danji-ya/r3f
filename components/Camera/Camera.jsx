@@ -4,7 +4,7 @@ import { Vector3 } from 'three';
 
 const CAMERA = {
   STEP: 0.05,
-  POSITION: [0, 5, 10],
+  POSITION: [0, 0, 10],
   MOVE_WEIGHT: 1.5,
 };
 
